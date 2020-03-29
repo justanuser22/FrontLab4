@@ -1,0 +1,68 @@
+<div class="col-12">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Denominación</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese el nombre de la empresa" aria-label="denominacion"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.denominacion">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Teléfono</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese el teléfono de la empresa" aria-label="telefono"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.telefono">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Horario de atención</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese el horario de atención" aria-label="horario"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.horario_atencion">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">¿Quiénes son?</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Describa quienes son" aria-label="descripción"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.quienes_somos">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Latitud</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Latitud" aria-label="latitud"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.latitud">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Longitud</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Longitud" aria-label="longitud"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.longitud">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Domicilio</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Dirección de la empresa" aria-label="domicilio"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.domicilio">>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Correo electrónico" aria-label="correo"
+            aria-describedby="basic-addon1" [(ngModel)]="empresa.email">>
+    </div>
+
+    <button class="btn btn-success btn-block" (click)="guardar()" >Guardar</button>
+    <button class="btn btn-warning btn-block" [routerLink]="['/tabla/empresa/']">Volver</button>
+</div>

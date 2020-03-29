@@ -1,0 +1,54 @@
+<div class="col-12">
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Título</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese el título de la noticia" aria-label="titulo"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.titulo">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Resúmen</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Resúmen de la noticia" aria-label="resumen"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.resumen">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Imágen</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese la URL" aria-label="imagen"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.imagen">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Contenido HTML</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Contenido HTML" aria-label="html"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.contenido_html">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">¿Publicada?</span>
+        </div>
+        <input type="text" class="form-control" placeholder="¿Se publicó esta noticia?" aria-label="publicacion"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.publicada">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Fecha</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Ingrese la fecha" aria-label="fecha"
+            aria-describedby="basic-addon1" [(ngModel)]="noticia.fecha">
+    </div>
+
+    <button class="btn btn-success btn-block" (click)="guardarr()">Guardar</button>
+    <button class="btn btn-warning btn-block" [routerLink]="['/tabla/noticia/']">Volver</button>
+
+</div>

@@ -16,8 +16,8 @@ export class EmpresaService {
       return this.http.get<Empresa[]> (this._miUrl);
   }
 
-  findById() : Observable <Empresa> {
-    return this.http.get<Empresa> (this._miUrl);
+  findById(id : number) : Observable <Empresa> {
+    return this.http.get<Empresa> (this._miUrl + id);
   }
 
   save(empresa : Empresa) : Observable <Empresa>{

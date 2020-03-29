@@ -1,0 +1,38 @@
+<div>
+    <button type="button" class="btn btn-primary btn-block" (click)="agregar()">Agregar</button>
+</div>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Denominación</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Horario</th>
+                <th scope="col">¿Quienes somos?</th>
+                <th scope="col">Latitud</th>
+                <th scope="col">Longitud</th>
+                <th scope="col">Domicilio</th>
+                <th scope="col">Email</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let empresa of empresas">
+                <th scope="row">{{empresa.id}}</th>
+                <td>{{empresa.denominacion}}</td>
+                <td>{{empresa.telefono}}</td>
+                <td>{{empresa.horario_atencion}}</td>
+                <td>{{empresa.quienes_somos}}</td>
+                <td>{{empresa.latitud}}</td>
+                <td>{{empresa.longitud}}</td>
+                <td>{{empresa.domicilio}}</td>
+                <td>{{empresa.email}}</td>
+                <td>
+                 <button type="button" class="btn btn-danger" (click)="delete(empresa.id)">ELIMINAR</button>
+                 <button type="button" class="btn btn-warning" (click)="update(empresa.id)">EDITAR</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

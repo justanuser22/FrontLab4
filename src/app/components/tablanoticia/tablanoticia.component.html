@@ -1,0 +1,35 @@
+<div>
+    <button type="button" class="btn btn-primary btn-block" (click)="agregar()">Agregar</button>
+</div>
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Título</th>
+                <th scope="col">Resúmen</th>
+                <th scope="col">Imágen</th>
+                <th scope="col">Contenido HTML</th>
+                <th scope="col">¿Publicada?</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let noticia of noticias">
+                <th scope="row">{{noticia.id}}</th>
+                <td>{{noticia.titulo}}</td>
+                <td>{{noticia.resumen}}</td>
+                <td>{{noticia.imagen}}</td>
+                <td>{{noticia.contenido_html}}</td>
+                <td>{{noticia.publicada}}</td>
+                <td>{{noticia.fecha}}</td>
+                <td>
+                 <button type="button" class="btn btn-danger" (click)="delete(noticia.id)">ELIMINAR</button>
+                 <button type="button" class="btn btn-warning" (click)="update(noticia.id)">EDITAR</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
